@@ -46,10 +46,10 @@ header {
   grid-template-columns: auto 1fr;
   align-items: center;
   justify-content: space-between;
-  height: 14dvh;
+  height: 16dvh;
   width: 100vw;
   z-index: 20;
-  padding: 10px 20px;
+  padding: 12px 20px;
   background-color: #e0a542;
 }
 
@@ -406,7 +406,7 @@ footer {
  */
 
 #producto {
-  padding: 10dvh 0dvh;
+  padding: 14dvh 0dvh;
   align-content: center;
 }
 
@@ -660,16 +660,18 @@ aside {
   }
 }
 
-/*Estilos Contacto*/
+/*
+################################
+###### Estilos Contacto ########
+################################
+*/
 
 #contacto {
-  padding-top: 10vh;
+  padding-top: 15vh;
 }
 
 /* 
-################################
 #### Formulario de Encargos ####
-################################
  */
 
 #contacto form {
@@ -690,9 +692,7 @@ aside {
 
 
 /* 
-################################
 ####Informacion de contacto#####
-################################
  */
 
 #contacto .contacto {
@@ -709,6 +709,12 @@ aside {
 #contacto .datos {
   flex-basis: 50%;
 }
+
+/*
+################################
+##### Responsive Contacto ######
+################################
+*/
 
 @media screen and (max-width: 860px) {
   #contacto .contacto {
@@ -732,7 +738,7 @@ aside {
 ################################
  */
 #carrito {
-  padding: 25dvh 0dvh;
+  padding: 20dvh 0dvh;
   display: flex;
 }
 
@@ -748,10 +754,12 @@ aside {
 }
 
 .item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 100px 2fr 1fr 1fr 1fr 1fr;
   align-items: center;
   border-bottom: 1px solid #9ca4a4;
   padding: 10px 0;
+  gap: 10px;
 }
 
 .item img {
@@ -759,49 +767,39 @@ aside {
   height: 100px;
   border-radius: 10px;
   object-fit: cover;
-  margin-right: 15px;
 }
 
 .nombre {
-  flex: 2;
+  font-size: 1rem;
 }
 
 .cantidad {
   display: flex;
   align-items: center;
   gap: 5px;
-  flex: 1;
 }
 
-
-.precio {
-  flex: 1;
-  text-align: center;
+.precio, .precio-total {
   font-weight: bold;
-}
-
-.precio-total {
-  flex: 1;
   text-align: center;
-  font-weight: bold;
 }
 
 .borrar {
+  justify-self: center;
   cursor: pointer;
+  width: 40px;
 }
 
 .total-compra {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 8%;
+  border-bottom: none;
 }
 
-h4 {
-  font-size: 20px;
+.total-compra h4 {
+  margin: 0;
+  font-size: 1.2rem;
 }
 
-/*## Seguir comprando/finalizar ##*/
-
+/* Botones de compra */
 .botones-compra {
   margin-top: 30px;
   display: flex;
@@ -811,29 +809,127 @@ h4 {
 
 .botones-compra a {
   color: black;
+  text-decoration: none;
 }
 
-.nonresponsive {
-  display: none;
-}
+/*
+################################
+##### Responsive Carrito #######
+################################
+*/
+
 
 @media screen and (max-width: 780px) {
-  #carrito {
-    display: none;
-  }
-
-  .nonresponsive {
-    height: 100vh;
-    width: 50vw;
-    margin-left: 25vw;
+  .item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    border-bottom: 1px solid #9ca4a4;
+    padding: 20px 10px;
+    position: relative;
   }
-    .nonresponsive i{
-      font-size: 100px !important;
-      margin-bottom: 5vh;
-    }
+
+  .item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .nombre {
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .precio, .precio-total {
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  .precio .precio-total {
+    font-size: 1.2rem;
+    color: #000;
+  }
+
+  .borrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .total-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .total-compra h4 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+  }
+
+  .botones-compra {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .botones-compra button {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .item {
+    padding: 15px 5px;
+  }
+
+  .item img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .nombre {
+    font-size: 0.95rem;
+    padding: 0 5px;
+  }
+
+  .cantidad {
+    gap: 6px;
+  }
+
+  .cantidad button {
+    padding: 4px 8px;
+  }
+
+  .precio .precio-total {
+    font-size: 1rem;
+  }
+
+  .borrar {
+    top: 5px;
+    right: 5px;
+  }
+
+  .total-compra h4 {
+    font-size: 1rem;
+  }
+
+  .botones-compra button {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .botones-compra {
+    gap: 10px;
+    padding: 0 10px;
+  }
 }
