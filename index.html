@@ -14,7 +14,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="./css/estilosPaginas.css">
+  <link rel="stylesheet" href="./css/estilosPaginas.css">
 </head>
 
 <body>
@@ -115,6 +115,25 @@
       <div><i class="icono fa-solid fa-box-archive"></i><span>Defensa al consumidor</span></div>
     </article>
   </footer>
+
+  <script>
+    const btnIzq = document.querySelector('.izq-boton');
+    const btnDer = document.querySelector('.der-boton');
+    const carruselItems = document.querySelector('.carrusel-items');
+
+    const desplazamiento = () => {
+      const carta = carruselItems.querySelector('.carta-producto');
+      return carta.offsetWidth + 16;
+    };
+
+    btnDer.addEventListener('click', () => {
+      carruselItems.scrollLeft += desplazamiento();
+    });
+
+    btnIzq.addEventListener('click', () => {
+      carruselItems.scrollLeft -= desplazamiento();
+    });
+  </script>
 </body>
 
 </html>
