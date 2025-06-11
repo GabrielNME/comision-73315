@@ -1,0 +1,29 @@
+// _tienda.scss
+#tienda {
+  padding: 20dvh 0dvh;
+  display: flex;
+}
+
+.filtro {
+  margin-left: 10vw;
+
+  .btn-outline-secondary {
+    color: $color-secundario;
+    border-color: $color-secundario;
+  }
+}
+
+.productos {
+  padding: 0 10vw;
+}
+
+.grilla-productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#tienda .carta-producto:hover {
+  box-shadow: 0 4px 12px rgb(150, 150, 150);
+}
+

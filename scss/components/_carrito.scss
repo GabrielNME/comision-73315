@@ -1,0 +1,123 @@
+#carrito {
+  padding: 20dvh 0dvh;
+  display: flex;
+}
+
+.carrito {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid $color-secundario;
+  border-radius: 25px;
+  font-family: Arial, sans-serif;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 100px 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid $color-secundario;
+  padding: 10px 0;
+  gap: 10px;
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+.nombre {
+  font-size: 1rem;
+}
+
+.cantidad {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.precio,
+.precio-total {
+  font-weight: bold;
+  text-align: center;
+}
+
+.borrar {
+  justify-self: center;
+  cursor: pointer;
+  width: 40px;
+}
+
+.total-compra {
+  border-bottom: none;
+
+  h4 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+}
+
+.botones-compra {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+// Responsive
+@media screen and (max-width: 780px) {
+  .item {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    position: relative;
+    display: flex;
+  }
+
+  .item img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .nombre,
+  .precio,
+  .precio-total {
+    text-align: center;
+  }
+
+  .borrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .botones-compra {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .item img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .botones-compra {
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .botones-compra button {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,198 @@
+#producto {
+  padding: 14dvh 0dvh;
+  align-content: center;
+
+  h1 {
+    margin-left: 18vw;
+  }
+
+  .comprar-producto {
+    display: flex;
+    padding: 0% 18vw;
+    align-items: flex-start;
+  }
+
+  .producto-img-compra {
+    width: 30vw;
+
+    img {
+      border-radius: 25px;
+      width: 100%;
+    }
+  }
+
+  .adicionales-img {
+    display: flex;
+    gap: 2.5%;
+    justify-content: center;
+
+    img {
+      margin-top: 0.75em;
+      width: 23%;
+      border-radius: 0.75em;
+    }
+  }
+
+  aside {
+    padding-left: 2vw;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    width: 30vw;
+  }
+
+  .comprar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    button {
+      height: 40px;
+      font-size: 16px;
+      padding: 0 1rem;
+      border: none;
+      border-radius: 8px 0 0 8px;
+      cursor: pointer;
+      background-color: $color-primario;
+    }
+
+    .precio {
+      background-color: $color-secundario;
+      border-radius: 0 8px 8px 0;
+    }
+  }
+
+  .extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+
+    button {
+      height: 40px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      background-color: $color-secundario;
+      cursor: pointer;
+    }
+  }
+
+  .descripcion,
+  .recomendados {
+    width: 62vw;
+    margin: 2vw 18vw;
+
+    p {
+      color: grey;
+    }
+
+    .listado-rec {
+      margin-top: 2vw;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1vw;
+
+      .producto-recomendado {
+        width: 14vw;
+        background: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        scroll-snap-align: start;
+
+        img {
+          width: 100%;
+          border-radius: 1rem;
+        }
+
+        .producto-comprar {
+          background-color: $color-primario;
+          border: none;
+          border-radius: 0.5rem;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          margin-top: 0.5rem;
+        }
+
+        .producto-nombre {
+          margin-top: 0.75rem;
+        }
+      }
+    }
+  }
+}
+// Media Queries
+@media screen and (max-width: 1400px) {
+  #producto .producto-img-compra,
+  #producto aside {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #producto .producto-img-compra,
+  #producto aside {
+    width: 46vw;
+  }
+
+  #producto .comprar-producto {
+    padding: 0 3vw;
+  }
+
+  #producto h1 {
+    margin-left: 3vw;
+  }
+
+  #producto .descripcion,
+  #producto .recomendados {
+    width: 94vw;
+    margin: 1vw 3vw;
+  }
+
+  #producto .recomendados .listado-rec .producto-recomendado {
+    width: 22vw;
+    border-radius: 0.60rem;
+  }
+
+  #producto .producto-recomendado img {
+    border-radius: 0.60rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #producto .recomendados .listado-rec .producto-recomendado {
+    width: 44vw;
+    border-radius: 0.50rem;
+  }
+
+  #producto .producto-recomendado img {
+    border-radius: 0.50rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #producto .comprar-producto {
+    flex-direction: column;
+    padding: 0 5vw;
+  }
+
+  #producto h1 {
+    margin-left: 5vw;
+  }
+
+  #producto .producto-img-compra,
+  #producto aside {
+    width: 90vw;
+  }
+
+  #producto aside {
+    margin: 2.5vh 0;
+    padding: 0;
+  }
+
+  #producto .descripcion,
+  #producto .recomendados {
+    width: 90vw;
+    margin: 3vw 5vw;
+  }
+}

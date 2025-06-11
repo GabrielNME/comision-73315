@@ -1,0 +1,19 @@
+{
+  "name": "preentrega1-mamaniestrada-gabriel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielNME/comision-73315.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielNME/comision-73315/issues"
+  },
+  "homepage": "https://github.com/GabrielNME/comision-73315#readme",
+  "description": ""
+}

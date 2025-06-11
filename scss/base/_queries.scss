@@ -1,0 +1,331 @@
+// _responsive.scss
+@media screen and (max-width: 650px) {
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    text-align: center;
+
+    img {
+      display: none;
+    }
+  }
+
+  nav {
+    grid-auto-flow: row;
+    justify-content: center;
+    margin-right: 0px;
+    gap: 2px;
+    font-size: 13px;
+  }
+
+  .footer-contacto,
+  .footer-legal {
+    display: none;
+  }
+
+  .footer-redes span {
+    display: none;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin-top: 20px;
+
+    .footer-redes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      gap: 30px;
+      font-size: 20px;
+    }
+
+    .footer-logo img {
+      height: 75px;
+      width: auto;
+    }
+  }
+}
+// ===============================
+// ====== Responsive INDEX =======
+// ===============================
+@media screen and (max-width: 650px) {
+  .informacion {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .separador {
+    display: none;
+  }
+
+  .resumen,
+  .suscripcion {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  p {
+    font-size: 14px !important;
+  }
+}
+
+// ===============================
+// ====== Responsive TIENDA ======
+// ===============================
+
+@media screen and (max-width: 1110px) {
+  #tienda .carta-producto .producto-nombre {
+    font-size: 20px !important;
+  }
+
+  #tienda .productos {
+    padding: 0 8vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #tienda .productos {
+    padding: 0 5vw;
+  }
+}
+
+// ===============================
+// ==== Responsive PRODUCTO ======
+// ===============================
+@media screen and (max-width: 1400px) {
+  #producto {
+    .producto-img-compra,
+    aside {
+      width: 40vw;
+    }
+
+    .comprar-producto {
+      padding: 0 8vw;
+    }
+
+    h1 {
+      margin-left: 8vw;
+    }
+
+    .descripcion,
+    .recomendados {
+      width: 82vw;
+      margin: 2vw 8vw;
+    }
+
+    .recomendados .producto-recomendado {
+      width: 19vw;
+
+      img {
+        border-radius: 0.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #producto {
+    .producto-img-compra,
+    aside {
+      width: 46vw;
+    }
+
+    .comprar-producto {
+      padding: 0 3vw;
+    }
+
+    h1 {
+      margin-left: 3vw;
+    }
+
+    .descripcion,
+    .recomendados {
+      width: 94vw;
+      margin: 1vw 3vw;
+    }
+
+    .recomendados .producto-recomendado {
+      width: 22vw;
+
+      img {
+        border-radius: 0.60rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #producto .recomendados .producto-recomendado {
+    width: 44vw;
+
+    img {
+      border-radius: 0.50rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #producto {
+    .comprar-producto {
+      flex-direction: column;
+      padding: 0 5vw;
+    }
+
+    h1 {
+      margin-left: 5vw;
+    }
+
+    .producto-img-compra,
+    aside {
+      width: 90vw;
+    }
+
+    aside {
+      margin: 2.5vh 0;
+      padding: 0;
+    }
+
+    .descripcion,
+    .recomendados {
+      width: 90vw;
+      margin: 3vw 5vw;
+    }
+  }
+}
+
+// ===============================
+// === Responsive CONTACTO ====
+// ===============================
+@media screen and (max-width: 860px) {
+  #contacto .contacto {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  #contacto form button {
+    width: 100%;
+  }
+}
+
+// ===============================
+// ====== Responsive CARRITO =====
+// ===============================
+@media screen and (max-width: 780px) {
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid $color-secundario;
+    padding: 20px 10px;
+    position: relative;
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .nombre {
+      font-size: 1rem;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .cantidad {
+      gap: 10px;
+      margin: 10px 0;
+    }
+
+    .precio,
+    .precio-total {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .borrar {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  .total-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+
+    h4 {
+      margin: 5px 0;
+      font-size: 1.2rem;
+    }
+  }
+
+  .botones-compra {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+
+    button {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .item {
+    padding: 15px 5px;
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .nombre {
+      font-size: 0.95rem;
+      padding: 0 5px;
+    }
+
+    .cantidad {
+      gap: 6px;
+
+      button {
+        padding: 4px 8px;
+      }
+    }
+
+    .precio .precio-total {
+      font-size: 1rem;
+    }
+
+    .borrar {
+      top: 5px;
+      right: 5px;
+    }
+  }
+
+  .total-compra h4 {
+    font-size: 1rem;
+  }
+
+  .botones-compra {
+    gap: 10px;
+    padding: 0 10px;
+
+    button {
+      width: 100%;
+      font-size: 0.95rem;
+    }
+  }
+}

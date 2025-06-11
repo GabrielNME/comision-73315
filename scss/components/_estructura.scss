@@ -1,0 +1,70 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: space-between;
+  height: 16dvh;
+  width: 100vw;
+  z-index: 20;
+  padding: 12px 20px;
+  background-color: $color-primario;
+
+  img {
+    margin-left: 40px;
+    height: 10vh;
+  }
+}
+
+nav {
+  margin-right: 50px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: 45px;
+}
+
+body {
+  padding-top: 6dvh;
+  background-color: $color-terciario;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto 1fr auto 1fr;
+  background-color: $color-primario;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .separador {
+    width: 2px;
+    height: 180px;
+    background-color: $color-secundario;
+  }
+
+  .footer-contacto,
+  .footer-redes,
+  .footer-legal {
+    font-size: 16px;
+    line-height: 1.8;
+    justify-self: center;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      span:hover {
+        @extend %hover-subrayado;
+        cursor: pointer;
+      }
+    }
+  }
+}

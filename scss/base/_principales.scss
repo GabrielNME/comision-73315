@@ -1,0 +1,27 @@
+// _fuentes.scss
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: nth($fuentes-principales, 1), sans-serif;
+}
+
+.fuente-blanca {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: black;
+    @extend %hover-subrayado;
+  }
+}
+
+.fuente-negra {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+    @extend %hover-subrayado;
+  }
+}

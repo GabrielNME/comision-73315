@@ -1,0 +1,115 @@
+// _index.scss
+.portada {
+  @include centrar-flex(column);
+  padding-top: 30dvh;
+  position: relative;
+  text-align: center;
+  color: white;
+  background-image: url("../img/Portada-scaled.jpg");
+  width: 100vw;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  mask-image: linear-gradient(black 80%, transparent);
+}
+
+.destacados {
+  padding: 2rem 0;
+  width: 60vw;
+  max-width: 1200px;
+  margin-inline: auto;
+
+  h2 {
+    text-align: center;
+    margin: 1rem 0;
+  }
+}
+
+.carrusel {
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &-boton {
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: $color-primario;
+    border: none;
+    border-radius: 50%;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+  }
+
+  &-items {
+    overflow: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    align-items: center;
+    padding: 2em;
+    gap: 1rem;
+  }
+
+  .izq-boton {
+    left: -1.5rem;
+  }
+
+  .der-boton {
+    right: -1.5rem;
+  }
+}
+
+.carta-producto {
+  flex: 0 0 15vw;
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  scroll-snap-align: start;
+
+  img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+}
+
+.producto-comprar {
+  background-color: $color-primario;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.producto-nombre {
+  margin-top: 0.75rem;
+}
+
+.informacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 2rem;
+
+  .resumen {
+    flex-basis: 65%;
+  }
+
+  .suscripcion {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 35%;
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+#contacto {
+  padding-top: 15vh;
+
+  form {
+    width: 60vw;
+    margin-left: 20vw;
+
+    .mb-3 {
+      display: flex !important;
+      flex-direction: column;
+      gap: 2vh;
+    }
+
+    button {
+      width: 15%;
+      align-self: end;
+    }
+  }
+
+  .contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 2rem;
+    width: 60vw;
+    margin: 5vh 20vw;
+  }
+
+  .datos {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  #contacto .contacto {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  #contacto form button {
+    width: 100%;
+  }
+}

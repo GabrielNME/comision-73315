@@ -1,0 +1,35 @@
+// ==============================
+// Variables de colores
+// ==============================
+
+$color-primario: #e0a542;
+$color-secundario: #9ca4a4;
+$color-terciario: #d1d2cb;
+
+// ==============================
+// Lista de fuentes
+// ==============================
+
+$fuentes-principales: "Montserrat", sans-serif;
+
+// ==============================
+// Extend
+// ==============================
+
+%hover-subrayado {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+// ==============================
+// Mixin
+// ==============================
+
+@mixin centrar-flex($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
