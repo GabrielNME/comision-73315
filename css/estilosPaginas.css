@@ -115,6 +115,66 @@ footer {
   cursor: pointer;
 }
 
+/* 
+################################
+### Responsive principales #####
+################################
+ */
+
+
+@media screen and (max-width: 625px) {
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    text-align: center;
+  }
+
+  header img {
+    display: none;
+  }
+
+  nav {
+    grid-auto-flow: row;
+    justify-content: center;
+    margin-right: 0px;
+    gap: 2px;
+    font-size: 13px;
+  }
+
+    /* Footer de pagina */
+
+  .footer-contacto,
+  .footer-legal {
+    display: none;
+  }
+
+  .footer-redes span {
+    display: none;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer-redes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 30px;
+    font-size: 20px;
+  }
+
+  .footer-logo img {
+    height: 75px;
+    width: auto;
+  }
+}
+
 /*
 ################################
 ######## Estilos Index #########
@@ -167,7 +227,7 @@ footer {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  background-color: orange;
+  background-color: #e0a542;
   border: none;
   border-radius: 50%;
   padding: 0.75rem 1rem;
@@ -209,7 +269,7 @@ footer {
 }
 
 .producto-comprar {
-  background-color: orange;
+  background-color: #e0a542;
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -274,68 +334,12 @@ footer {
   .suscripcion {
     flex-basis: 100%;
   }
-
-  /* Footer de pagina */
-
-  .footer-contacto,
-  .footer-legal {
-    display: none;
-  }
-
-  .footer-redes span {
-    display: none;
-  }
-
-  footer {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .footer-redes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    gap: 30px;
-    font-size: 20px;
-  }
-
-  .footer-logo img {
-    height: 75px;
-    width: auto;
-  }
 }
-
-@media screen and (max-width: 600px) {
-  header {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    text-align: center;
-  }
-
-  header img {
-    display: none;
-  }
-
-  nav {
-    grid-auto-flow: row;
-    justify-content: center;
-    margin-right: 0px;
-    gap: 2px;
-    font-size: 13px;
-  }
-}
-
-@media screen and (max-width: 650px) {}
 
 @media screen and (max-width: 400px) {
   p {
     font-size: 14px !important;
   }
-
 }
 
 
@@ -541,7 +545,7 @@ aside {
 }
 
 .producto-recomendado .producto-comprar {
-  background-color: orange;
+  background-color: #e0a542;
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
