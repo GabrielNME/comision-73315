@@ -21,6 +21,53 @@
     }
   }
 
+  .slider {
+    height: 45vh;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 10px;
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fade 16s infinite;
+
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          animation-delay: (4s * ($i - 1));
+        }
+      }
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+
+    5% {
+      opacity: 1;
+    }
+
+    25% {
+      opacity: 1;
+    }
+
+    30% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
   .adicionales-img {
     display: flex;
     gap: 2.5%;
@@ -78,7 +125,7 @@
 
   .descripcion,
   .recomendados {
-    width: 62vw;
+    width: 68vw;
     margin: 2vw 18vw;
 
     p {
@@ -90,9 +137,10 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1vw;
+      justify-content: center;
 
       .producto-recomendado {
-        width: 14vw;
+        width: 15vw;
         background: white;
         border-radius: 1rem;
         padding: 1rem;
@@ -121,18 +169,38 @@
     }
   }
 }
+
 // Media Queries
 @media screen and (max-width: 1400px) {
+
   #producto .producto-img-compra,
   #producto aside {
     width: 40vw;
   }
+  #producto .slider{
+    height: 30vh;
+  }
+
+  #producto .descripcion,
+  #producto .recomendados {
+    width: 90vw;
+  }
+
+  #producto .recomendados .listado-rec .producto-recomendado {
+    width: 18vw;
+  }
 }
 
 @media screen and (max-width: 850px) {
+
   #producto .producto-img-compra,
+  #producto .slider,
   #producto aside {
     width: 46vw;
+  }
+
+  #producto .slider{
+    height: 25vh;
   }
 
   #producto .comprar-producto {
@@ -175,12 +243,16 @@
     flex-direction: column;
     padding: 0 5vw;
   }
+  #producto .slider{
+    height: 30vh;
+  }
 
   #producto h1 {
     margin-left: 5vw;
   }
 
   #producto .producto-img-compra,
+  #producto .slider,
   #producto aside {
     width: 90vw;
   }
